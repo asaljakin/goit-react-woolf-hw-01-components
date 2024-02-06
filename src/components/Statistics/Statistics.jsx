@@ -15,8 +15,6 @@ export const GenerateStatistics = ({ title, stats }) => {
       <List>
         {stats.map(({ id, label, percentage }) => {
           const bgColor = randomColorRGBA(0.6);
-          console.log(bgColor);
-          // randomColor;
           return (
             <ListItem key={id} bgColor={bgColor}>
               <Label>{label}</Label>
