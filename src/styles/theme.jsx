@@ -2,7 +2,7 @@ export const theme = Object.freeze({
   colors: {
     accent: '#f3f6f9',
     white: '#ffffff',
-    gray: '#8997a5',
+    gray: '#6a6e71',
     light: '#ecf1f4',
     dark: '#212121',
     blue: '#00bcd5',
@@ -10,9 +10,11 @@ export const theme = Object.freeze({
     tagBackground: ['linear-gradient(to bottom, #FFD194, #D1913C)'],
   },
   fontSizes: {
+    minimum: '12px',
     small: '14px',
     medium: '18px',
-    large: '22px',
+    large: '20px',
+    exlarge: '24px',
   },
   spacing: value => `${4 * value}px`,
   shadows: {

@@ -7,10 +7,10 @@ export const CardStatistics = styled.section`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 export const Title = styled.h2`
-  font-size: 24px;
+  font-size: ${props => props.theme.fontSizes.exlarge};
   text-align: center;
-  color: #575757;
-  background-color: #ffffff;
+  color: ${props => props.theme.colors.gray};
+  background-color: ${props => props.theme.colors.white};
   padding: 30px;
 `;
 export const List = styled.ul`
@@ -23,10 +23,17 @@ export const ListItem = styled.li`
   align-items: center;
   flex-direction: column;
   padding: 15px;
-  width: 100px;
+  width: ${props => props.theme.spacing(25)};
   border: 1px solid #a9a9a9;
+  gap: ${props => props.theme.spacing(3)};
+  background-color: ${props => props.bgColor};
 `;
+
 export const Label = styled.span`
-  font-size: 14px;
+  font-size: ${props => props.theme.fontSizes.small};
+  font-weight: 500;
 `;
-export const Percentage = styled.span``;
+export const Percentage = styled.span`
+  font-size: ${props => props.theme.fontSizes.medium};
+  font-weight: 700;
+`;

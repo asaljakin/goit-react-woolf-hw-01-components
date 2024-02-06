@@ -1,3 +1,4 @@
+import { randomColorRGBA } from 'components/helper';
 import {
   CardStatistics,
   Label,
@@ -13,10 +14,13 @@ export const GenerateStatistics = ({ title, stats }) => {
       {title && <Title>{title}</Title>}
       <List>
         {stats.map(({ id, label, percentage }) => {
+          const bgColor = randomColorRGBA(0.6);
+          console.log(bgColor);
+          // randomColor;
           return (
-            <ListItem key={id}>
+            <ListItem key={id} bgColor={bgColor}>
               <Label>{label}</Label>
-              <Percentage>{percentage}</Percentage>
+              <Percentage>{percentage + '%'}</Percentage>
             </ListItem>
           );
         })}

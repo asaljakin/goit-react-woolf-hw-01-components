@@ -4,7 +4,7 @@ export const Profile = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-top: ${props => props.theme.spacing(8)};
-  width: 300px;
+  width: ${props => props.theme.spacing(75)};
   background-color: ${props => props.theme.colors.white};
   box-shadow: ${props => props.theme.shadows.medium};
 `;
@@ -12,6 +12,7 @@ export const Profile = styled.div`
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: auto;
@@ -24,20 +25,18 @@ export const Avatar = styled.img`
   background-color: ${props => props.theme.colors.light};
 `;
 export const Name = styled.p`
-  margin-top: 20px;
+  margin-top: ${props => props.theme.spacing(8)};
   font-size: 18px;
   font-weight: 700;
 `;
 
 export const Tag = styled.p`
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 18px;
+  font-size: ${props => props.theme.fontSizes.medium};
   color: ${props => props.theme.colors.gray};
 `;
 export const Location = styled.p`
-  margin: 0;
-  font-size: 18px;
+  margin-bottom: ${props => props.theme.spacing(6)};
+  font-size: ${props => props.theme.fontSizes.medium};
   color: ${props => props.theme.colors.gray};
 `;
 export const Stats = styled.ul`
@@ -48,21 +47,20 @@ export const Stats = styled.ul`
 `;
 export const StatsItem = styled.li`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   color: ${props => props.theme.colors.gray};
   border: 1px solid #a9a9a9;
   background-color: ${props => props.theme.colors.accent};
-  padding: 15px;
+  padding: ${props => props.theme.spacing(4)};
   width: 100%;
-  gap: 10px;
+  gap: ${props => props.theme.spacing(2)};
 `;
 export const ItemLabel = styled.span`
-  font-size: 12px;
+  font-size: ${props => props.theme.fontSizes.minimum};
 `;
 export const ItemQuantity = styled.span`
-  font-size: 14px;
+  font-size: ${props => props.theme.fontSizes.small};
   font-weight: 700;
-  color: ${props => props.theme.colors.dark};
 `;
