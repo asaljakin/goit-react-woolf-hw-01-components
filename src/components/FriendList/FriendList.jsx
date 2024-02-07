@@ -1,21 +1,17 @@
-import {
-  FriendAvatar,
-  FriendList,
-  FriendName,
-  FriendStatus,
-  ListItem,
-} from './FriendList.styled';
+import { GenerateFriendListItem } from 'components/FriendListItem/FriendListItem';
+import { FriendList } from './FriendList.styled';
 
 export const GenerateFriendList = ({ friends }) => {
   return (
     <FriendList>
       {friends.map(({ id, avatar, name, isOnline }) => {
         return (
-          <ListItem key={id}>
-            <FriendStatus status={isOnline}></FriendStatus>
-            <FriendAvatar src={avatar} alt="User avatar" width="48" />
-            <FriendName className="name">{name}</FriendName>
-          </ListItem>
+          <GenerateFriendListItem
+            key={id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
+          ></GenerateFriendListItem>
         );
       })}
     </FriendList>
