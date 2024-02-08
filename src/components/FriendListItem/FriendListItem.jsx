@@ -5,12 +5,12 @@ import {
   ListItem,
 } from './FriendListItem.styled';
 
-export const GenerateFriendListItem = ({ avatar, name, isOnline }) => {
+export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <ListItem>
-      <FriendStatus status={isOnline}></FriendStatus>
+      <FriendStatus status={isOnline} />
       <FriendAvatar src={avatar} alt="User avatar" width="48" />
-      <FriendName className="name">{name}</FriendName>
+      <FriendName>{name}</FriendName>
     </ListItem>
   );
 };

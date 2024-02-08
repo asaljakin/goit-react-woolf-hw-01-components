@@ -1,12 +1,12 @@
 import {
-  GenerateProfile,
+  Profile,
   Container,
   Section,
   Heading,
-  GenerateStatistics,
-  GenerateFriendList,
+  Statistics,
   SubHeading,
-  GenerateTransactionHistory,
+  TransactionHistory,
+  FriendList,
 } from 'components';
 
 import user from 'data/user.json';
@@ -21,7 +21,7 @@ export const App = () => {
         <Heading marginBottom="50px" textAlign="center">
           1 - Профіль соціальної мережі
         </Heading>
-        <GenerateProfile {...user} />
+        <Profile {...user} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           2- Секція статистики
@@ -29,21 +29,21 @@ export const App = () => {
         <SubHeading marginTop="20px" marginBottom="20px">
           2.1 З назвою
         </SubHeading>
-        <GenerateStatistics title="Upload stats" stats={data} />
+        <Statistics title="Upload stats" stats={data} />
         <SubHeading marginTop="20px" marginBottom="20px">
           2.2 Без назви
         </SubHeading>
-        <GenerateStatistics stats={data} />
+        <Statistics stats={data} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           3 - Список друзів
         </Heading>
-        <GenerateFriendList friends={friends} />
+        <FriendList friends={friends} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           4 - Історія транзакцій
         </Heading>
-        <GenerateTransactionHistory transactions={transactions} />
+        <TransactionHistory transactions={transactions} />
       </Container>
     </Section>
   );

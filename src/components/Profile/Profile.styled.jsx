@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Profile = styled.div`
+export const ProfileCard = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-top: ${props => props.theme.spacing(8)};

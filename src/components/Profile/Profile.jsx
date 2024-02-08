@@ -5,20 +5,20 @@ import {
   ItemQuantity,
   Location,
   Name,
-  Profile,
+  ProfileCard,
   Stats,
   StatsItem,
   Tag,
 } from './Profile.styled';
 
-export const GenerateProfile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <Profile>
+    <ProfileCard>
       <Description>
-        <Avatar src={avatar} alt="User avatar"></Avatar>
+        <Avatar src={avatar} alt="User avatar" />
         <Name>{username}</Name>
-        <Tag className="tag">{'@' + tag}</Tag>
-        <Location className="location">{location}</Location>
+        <Tag>{'@' + tag}</Tag>
+        <Location>{location}</Location>
       </Description>
 
       <Stats>
@@ -35,6 +35,6 @@ export const GenerateProfile = ({ username, tag, location, avatar, stats }) => {
           <ItemQuantity>{stats.likes}</ItemQuantity>
         </StatsItem>
       </Stats>
-    </Profile>
+    </ProfileCard>
   );
 };

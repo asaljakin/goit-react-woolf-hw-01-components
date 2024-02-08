@@ -8,7 +8,7 @@ import {
   Title,
 } from './Statistics.styled';
 
-export const GenerateStatistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <CardStatistics>
       {title && <Title>{title}</Title>}

@@ -1,6 +1,6 @@
 import { BaseTable, THead, Td, Th, Tr } from './TransactionHistory.styled';
 
-export const GenerateTransactionHistory = ({ transactions }) => {
+export const TransactionHistory = ({ transactions }) => {
   return (
     <BaseTable>
       <THead>

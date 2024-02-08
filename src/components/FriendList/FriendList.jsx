@@ -1,19 +1,19 @@
-import { GenerateFriendListItem } from 'components/FriendListItem/FriendListItem';
-import { FriendList } from './FriendList.styled';
+import { FriendListItem } from 'components/FriendListItem/FriendListItem';
+import { List } from './FriendList.styled';
 
-export const GenerateFriendList = ({ friends }) => {
+export const FriendList = ({ friends }) => {
   return (
-    <FriendList>
+    <List>
       {friends.map(({ id, avatar, name, isOnline }) => {
         return (
-          <GenerateFriendListItem
+          <FriendListItem
             key={id}
             avatar={avatar}
             name={name}
             isOnline={isOnline}
-          ></GenerateFriendListItem>
+          />
         );
       })}
-    </FriendList>
+    </List>
   );
 };
